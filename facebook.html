@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Facebook</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/style.css">
+
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+  
+
+.container {
+  width: 50%;
+  height: 40px;
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+ 
+ 
+}
+.navigation-wrapper {
+  position: relative;
+}
+.navigation-button {
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+  right: 100px;
+  background: transparent;
+  cursor: pointer;
+}
+.navigation-button .fa {
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 10px;
+    color: white;
+}
+ 
+.navigation-menu ul li {
+  list-style: none;
+  font-family: impact;
+  font-weight: 300;
+  color: hsl(0,0%,70%);
+}
+
+.navigation-menu {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  background: rgb(165, 194, 38);
+  height: 100%;
+  transform: skewX(0deg) translate(100%,0);
+  transform-origin: top right;
+  transition: all .2s ease-in;
+  z-index: -1;
+}
+.navigation-menu ul {
+  transform: skewX(-8deg);
+  transform-origin: top left;
+  position: fixed;
+  right: 120px;
+  top: 120px;
+  width: 200px;
+  text-align: right;
+
+}
+.navigation-menu ul li {
+  position: relative;
+    z-index: 999;
+  font-size: 32px;
+  color: hsl(0,0%,10%);
+  line-height: 64px;
+}
+.navigation-menu ul li  a {
+  border: none;
+  color: hsl(0,0%,10%);
+  text-decoration: none;
+}
+.navigation-menu.active {
+  transform: skewX(8deg) translate(0,0);
+    
+}
+
+
+.navigation-menu.active li {
+  opacity: 1;
+  transform: translate(0,0);
+  transition: all .2s ease-in 0s;
+}
+ 
+
+
+       
+        
+        
+       
+    </style></style>
+</head>
+<body>
+   
+<div class="cont">
+    
+    <div class="formF">
+       
+        <p id="pC">log in with</p>
+        <div class="imgLogoFb">
+            <img src="imgs/Facebook_48px.png">
+            <p>Facebook</p>
+            
+        </div>
+        <div class="hr">
+     <hr id="hr1">
+     
+       <hr id="hr2">
+        </div>
+        
+        <form>
+            <div class="inUser1">
+            <div class="divImg">
+             <img id="imgUser" src="imgs/User%20Mal.png">
+              </div>
+              
+               <div class="divImg" id="div2">
+               <img id="imgUser1" src="imgs/Lock.png">
+                </div>
+                
+            </div>
+            <div class="inUser">
+          
+            <input type="text" placeholder="User name" >
+            <input type="password" placeholder="Password">
+            </div>
+            
+        <button id="btnLogin">log in</button>
+        </form>
+        <div class="supDiv">
+            <input type="checkbox" name="remembre" value="ggg" id="pub-site">
+            <p id="lb" for="pub-site">remmembre</p>
+        </div>
+        
+        <div id="fotgt">
+        <a  href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login">forget password </a>
+        <p>or</p>
+        <a  href="https://ar-ar.facebook.com/">sign up</a>
+        </div>
+    </div>
+    
+</div>
+<div class="container">
+    <div id="logo"><h1>HOPE</h1></div>
+    
+    
+    
+    <div class="navigation-wrapper">
+      <div class="navigation-button">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="navigation-menu">
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+          
+        </ul>
+      </div>
+    </div>
+   
+    
+    
+  </div>
+  <script>    var navButton = document.querySelector('.navigation-button');
+    var navMenu = document.querySelector('.navigation-menu');
+    var win = window;
+    
+    function openMenu(event) {
+      
+      navButton.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+      
+    function closeMenu(event) {
+      if (navButton.classList.contains('active')) {
+        navButton.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    }
+      navButton.addEventListener('click', openMenu, false);
+    
+    win.addEventListener('click',closeMenu, false); 
+  </script>
+</body>
+</html>
